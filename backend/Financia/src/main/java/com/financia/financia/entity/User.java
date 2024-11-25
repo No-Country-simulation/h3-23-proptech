@@ -33,11 +33,10 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UserRoles role;
 
-    private LocalDate creation_date;
-    private String country;
-    private String city;
-    private String state;
+    @Embedded
+    private Address address;
 
+    private LocalDate creation_date;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
