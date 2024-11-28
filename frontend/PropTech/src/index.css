@@ -15,4 +15,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-primario-500: #FFA700;
+  --color-primario-400: #FFC919;
+  --color-primario-300: #F3E3BF;
+
+  --color-secundario-500: #13522e;
+  --color-secundario-400: #E1F0D7;
+
+  --color-terciario-500: #2B3E79;
+  --color-terciario-400: #556594;
 }

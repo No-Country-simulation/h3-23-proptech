@@ -3,6 +3,7 @@ import Home from './pages/home/home'
 import SignUp from './pages/signUp/signup'
 import SignIn from './pages/signIn/signin'
 import Error from './pages/error/error404'
+import Landing from "./pages/landing/landing";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     {
         path: "/signin",
         element: <SignIn />
+    },
+    {
+        path: "/landing",
+        element: <Landing />
     }
 ]);
 
