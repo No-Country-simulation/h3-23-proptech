@@ -39,16 +39,6 @@ public class User implements UserDetails {
     private String state;
 
 
-    //Getters
-    public Integer getId() {
-        return id;
-    }
-
-    public UserRoles getRole() {
-        return role;
-    }
-
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         switch (this.role) {

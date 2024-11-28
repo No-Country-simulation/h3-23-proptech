@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04898ea6-d73b-49be-8bc0-368e63faf089" name="Changes" comment="Merge branch 'jrh' of https://github.com/No-Country-simulation/h3-23-proptech into jrh">
-      <change beforePath="$PROJECT_DIR$/Financia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityConfigurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityConfigurations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Financia/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,14 +45,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FinanciaApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "back-jrh",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FinanciaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;back-jrh&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FinanciaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.financia.financia.FinanciaApplication" />
@@ -86,6 +93,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'jrh' of https://github.com/No-Country-simulation/h3-23-proptech into jrh" />

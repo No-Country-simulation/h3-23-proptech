@@ -25,6 +25,7 @@ public class SecurityConfigurations {
     @Autowired
     private SecurityFilter securityFilter;
 
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -43,16 +44,6 @@ public class SecurityConfigurations {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager();
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public CorsFilter corsFilter(){
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("http://localhost:3000");
@@ -65,4 +56,15 @@ public class SecurityConfigurations {
 
         return new CorsFilter(source);
     }
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
 }
