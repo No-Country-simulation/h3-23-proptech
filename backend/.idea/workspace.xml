@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04898ea6-d73b-49be-8bc0-368e63faf089" name="Changes" comment="Merge branch 'jrh' of https://github.com/No-Country-simulation/h3-23-proptech into jrh">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityConfigurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityConfigurations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/security/SecurityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/service/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Financia/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Financia/src/main/java/com/financia/financia/repository/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
