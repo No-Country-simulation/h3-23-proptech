@@ -38,6 +38,10 @@ public class User implements UserDetails {
 
     private LocalDate creation_date;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Document> documents;
+
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         switch (this.role) {
