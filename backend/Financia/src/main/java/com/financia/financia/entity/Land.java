@@ -1,10 +1,7 @@
 package com.financia.financia.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -14,6 +11,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Land {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +23,10 @@ public class Land {
     private Integer price;
     private LocalDate creation_date;
     private String geo_coordinates;
+
+    @PrePersist
+    private void prePersist() {
+        this.unit_measure = "metros";
+        this.creation_date = LocalDate.now();
+    }
 }
