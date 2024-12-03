@@ -4,6 +4,7 @@ import SignUp from './pages/signUp/signup'
 import SignIn from './pages/signIn/signin'
 import Error from './pages/error/error404'
 import Landing from "./pages/landing/landing";
+import SimulatorForm from "./pages/simulator/SimulatorForm";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     {
         path: "/landing",
         element: <Landing />
+    },
+    {
+        path: "/simulator",
+        element: <SimulatorForm />
     }
 ]);
 
