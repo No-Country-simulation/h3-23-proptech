@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -47,5 +48,21 @@ public class OpportunityServiceImpl implements OpportunityService {
                 opportunity.getInterest_rate(),
                 opportunity.getTerm_months()
         )).collect(Collectors.toList());
+    }
+
+    @Override
+    public OpportunityDTO findOpportunityById(Integer id) {
+        Optional<Opportunity> opportunity = opportunityRepository.findById(id);
+        if (opportunity.isPresent()) {
+            Opportunity opportunityDB = opportunity.get();
+            return new OpportunityDTO(opportunityDB.getId(),
+                    opportunityDB.getBuyer().getName(),
+                    opportunityDB.getLand().getLocation(),
+                    opportunityDB.getRequest_amount(),
+                    opportunityDB.getInterest_rate(),
+                    opportunityDB.getTerm_months());
+        }
+
+        return null;
     }
 }

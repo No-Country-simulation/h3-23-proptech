@@ -10,4 +10,5 @@ import java.util.List;
 public interface OpportunityService {
     void newOpportunity(Buyer buyer, Land land, LandDTO landDTO);
     List<OpportunityDTO> getOpportunities();
+    OpportunityDTO findOpportunityById(Integer id);
 }
