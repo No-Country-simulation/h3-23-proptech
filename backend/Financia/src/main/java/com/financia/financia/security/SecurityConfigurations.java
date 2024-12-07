@@ -34,6 +34,7 @@ public class SecurityConfigurations {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers(HttpMethod.POST,"/users/register").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/lands/save").permitAll()
                         .anyRequest()
                         .authenticated()
                 )
