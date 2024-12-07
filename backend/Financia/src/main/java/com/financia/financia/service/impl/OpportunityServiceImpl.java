@@ -1,6 +1,7 @@
 package com.financia.financia.service.impl;
 
 import com.financia.financia.dto.LandDTO;
+import com.financia.financia.dto.OpportunityDTO;
 import com.financia.financia.entity.Buyer;
 import com.financia.financia.entity.Land;
 import com.financia.financia.entity.Opportunity;
@@ -9,6 +10,9 @@ import com.financia.financia.repository.OpportunityRepository;
 import com.financia.financia.service.OpportunityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class OpportunityServiceImpl implements OpportunityService {
@@ -29,5 +33,19 @@ public class OpportunityServiceImpl implements OpportunityService {
         opportunity.setTerm_months(landDTO.term_months());
         opportunity.setStatus(OpportunityStatus.PENDING);
         opportunityRepository.save(opportunity);
+    }
+
+    @Override
+    public List<OpportunityDTO> getOpportunities() {
+        List<Opportunity> all = opportunityRepository.findAll();
+
+        return all.stream().map(opportunity -> new OpportunityDTO(
+                opportunity.getId(),
+                opportunity.getBuyer().getName(),
+                opportunity.getLand().getLocation(),
+                opportunity.getRequest_amount(),
+                opportunity.getInterest_rate(),
+                opportunity.getTerm_months()
+        )).collect(Collectors.toList());
     }
 }
