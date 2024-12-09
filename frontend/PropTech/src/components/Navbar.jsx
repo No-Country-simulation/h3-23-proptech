@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 flex items-center justify-between w-full px-6 py-4 bg-white shadow z-100">
@@ -23,10 +25,10 @@ const Navbar = () => {
       </ul>
       <div className="space-x-2">
         <button className="px-4 py-2 rounded text-secondary-500 hover:bg-yellow-400 hover:text-white">
-          Iniciar sesión
+          <Link to="/signin">Iniciar sesión</Link>
         </button>
         <button className="px-4 py-2 rounded text-secondary-500 hover:bg-yellow-400 hover:text-white">
-          Registrarse
+          <Link to="/signup">Registrarse</Link>
         </button>
       </div>
     </nav>

@@ -7,11 +7,11 @@ import Landing from "./pages/landing/landing";
 import SimulatorForm from "./pages/simulator/SimulatorForm";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Home />,
-        errorElement: <Error />
-    },
+    // {
+    //     path: "/",
+    //     element: <Home />,
+    //     errorElement: <Error />
+    // },
     {
         path: "/signup",
         element: <SignUp />
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <SignIn />
     },
     {
-        path: "/landing",
+        path: "/",
         element: <Landing />
     },
     {
