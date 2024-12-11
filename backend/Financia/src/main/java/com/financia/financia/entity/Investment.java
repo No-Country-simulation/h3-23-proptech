@@ -33,4 +33,9 @@ public class Investment {
 
     @Column(name = "invest_date")
     private LocalDate investmentDate;
+
+    @PrePersist
+    void prePersist() {
+        this.investmentDate = LocalDate.now();
+    }
 }
