@@ -20,8 +20,6 @@ function SignIn() {
             newErrors.username = "Este campo es obligatorio";
         } else if (formData.username.length < 3) {
             newErrors.username = "El nombre de usuario es demasiado corto";
-        } else if (formData.username.length > 20) {
-            newErrors.username = "Máximo 20 caracteres";
         }
 
         if (!formData.password) {
@@ -45,25 +43,25 @@ function SignIn() {
         if (!validate()) return;
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_Back}/sign_in`, {
+            const response = await fetch(`http://localhost:8080/api/v1/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    username: formData.username,
+                    email: formData.username,
                     password: formData.password,
                 }),
             });
 
             const data = await response.json();
             if (response.ok) {
-                localStorage.setItem('token', data.data.token.token_key);                                    
-                localStorage.setItem('id', data.data.user.id);
-                localStorage.setItem('username', data.data.user.username);
-                localStorage.setItem('email', data.data.user.email);
+                console.log(data)
+                localStorage.setItem('jwtToken', data.jwtToken);
+                localStorage.setItem('id', data.id);
+                localStorage.setItem('role', data.role);
                 setMessage("¡Inicio de sesión exitoso!");
-                navigate('/todosloscursos');
+                navigate('/');
             } else {
                 setMessage(`Error: ${data.message}`);
             }
@@ -83,7 +81,7 @@ function SignIn() {
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <input
                             placeholder="Nombre de Usuario"
-                            className="pl-4 w-full border h-10 rounded"
+                            className="pl-4 w-full border h-10 rounded text-black"
                             type="text"
                             name="username"
                             value={formData.username}
@@ -93,7 +91,7 @@ function SignIn() {
 
                         <input
                             placeholder="Contraseña"
-                            className="pl-4 w-full border h-10 rounded"
+                            className="pl-4 w-full border h-10 rounded text-black"
                             type="password"
                             name="password"
                             value={formData.password}

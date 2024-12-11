@@ -1,13 +1,16 @@
 import { useState } from "react";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import { useNavigate } from 'react-router-dom';
 
 function Sign() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: "",
         usuario: "",
         password: "",
         rPassword: "",
+        role: "BUYER"
     });
     const [errors, setErrors] = useState({});
     const [message, setMessage] = useState("");
@@ -71,21 +74,22 @@ function Sign() {
         if (!validate()) return;
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_Back}/sign_up`, {
+            const response = await fetch(`http://localhost:8080/api/v1/users/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     email: formData.email,
-                    username: formData.usuario,
                     password: formData.password,
+                    role: "BUYER"
                 }),
             });
 
             const data = await response.json();
             if (response.ok) {
                 setMessage("¡Registro exitoso!");
+                navigate('/');
             } else {
                 setMessage(`Error: ${data.message}`);
             }
@@ -105,7 +109,7 @@ function Sign() {
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <input
                             placeholder="Correo Electrónico"
-                            className="pl-4 w-full border h-10 rounded"
+                            className="pl-4 w-full border h-10 rounded text-black"
                             type="email"
                             name="email"
                             value={formData.email}
@@ -117,7 +121,7 @@ function Sign() {
 
                         <input
                             placeholder="Nombre de Usuario"
-                            className="pl-4 w-full border h-10 rounded"
+                            className="pl-4 w-full border h-10 rounded text-black"
                             type="text"
                             name="usuario"
                             value={formData.usuario}
@@ -129,7 +133,7 @@ function Sign() {
 
                         <input
                             placeholder="Contraseña"
-                            className="pl-4 w-full border h-10 rounded"
+                            className="pl-4 w-full border h-10 rounded text-black"
                             type="password"
                             name="password"
                             value={formData.password}
@@ -141,7 +145,7 @@ function Sign() {
 
                         <input
                             placeholder="Repetir Contraseña"
-                            className="pl-4 w-full border h-10 rounded"
+                            className="pl-4 w-full border h-10 rounded text-black"
                             type="password"
                             name="rPassword"
                             value={formData.rPassword}
