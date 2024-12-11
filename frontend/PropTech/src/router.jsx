@@ -5,6 +5,8 @@ import SignIn from './pages/signIn/signin'
 import Error from './pages/error/error404'
 import Landing from "./pages/landing/landing";
 import SimulatorForm from "./pages/simulator/SimulatorForm";
+import NavbarPlatform from "./components/NavbarPlatform.jsx";
+import Dashboard from "./pages/dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
     // {
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
     {
         path: "/simulator",
         element: <SimulatorForm />
+    },
+    {
+        path: "/dashboard",
+        element: <Dashboard />
     }
 ]);
 
